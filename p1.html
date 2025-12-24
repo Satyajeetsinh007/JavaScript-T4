@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var a=undefined;
+        var b="test";
+        var c=true;
+        var d=5;
+        let e=null;
+        document.write(typeof(a)+"<br>");
+        document.write(typeof(b)+"<br>");
+        document.write(typeof(c)+"<br>");
+        document.write(typeof(d)+"<br>");
+        document.write(typeof(e)+"<br>");
+
+        let o={
+            name:"John",
+            age:30,
+            city:"New York"
+        }
+       // document.write(o("name")+"<br>");
+        document.write(o.name+"<br>");
+        for(let key in o){
+            document.write(key+" : "+o[key]+"<br>");
+        }
+        document.write(o["name"]+"<br>");
+        b=["apple","banana","cherry"];
+        document.write(b[1]+"<br>");
+        document.write(b[b.length-1]+"<br>");
+        for(let i=0;i<b.length;i++){
+            document.write(b[i]+"<br>");
+        }
+        fruits=["apple","banana","cherry"];
+        fruits.push("orange");
+        for(let i=0;i<fruits.length;i++){
+            document.write(fruits[i]+"<br>");
+        }
+        let removedFruit=fruits.pop();
+        document.write("Removed fruit: "+removedFruit+"<br>");
+        let nums=[1,2,3,4];
+        let squares=nums.map(num=>num*num);
+        console.log(squares);
+        let ages=[32,33,16,40];
+        let adultAges=ages.filter(age=>age>=18);
+        console.log(adultAges);
+        let names=["Alice","Bob","Charlie"];
+        names.forEach(name=>{
+            console.log("Hello, "+name+"!");
+        });
+        console.log(names.includes("Bob")); // true
+        console.log(names.includes("David")); // false
+
+        let users=[
+            {
+                id:1,
+                name:"Alice"
+            }
+            ,
+            {
+                id:2,
+                name:"Bob"
+            },
+            {
+                id:3,
+                name:"Charlie"
+            }
+        ]
+        let user=users.find(user=>user.id===2);
+        console.log(user); // {id: 2, name: "Bob"}
+        document.write("---------------------<br>");
+        let veg=["carrot","broccoli","spinach"];
+        for(let v of veg){
+            document.write(v+"<br>");
+        }
+        for(let index in veg){
+            document.write(index+" : "+veg[index]+"<br>");
+        }
+        document.write("---------------------<br>");
+        // with objects
+        let person={
+            fname:"John",
+            lname:"Doe",
+            age:25
+        };
+        for(let key in person){
+            document.write(key+" : "+person[key]+"<br>");
+        }
+        function showMessage(){
+            alert("Hello, this is a message!");
+        }
+        (function (){
+            document.write("This is an anonymous function");
+        })();
+        console.log("_---------------------");
+        function fun(f_name,l_name){
+            document.write("Hello "+f_name+" "+l_name+"<br>");
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="Show Message" onclick="showMessage()">
+    <input type="button" value="Greet User" onclick="fun('Jane','Doe')">
+</body>
+</html>
