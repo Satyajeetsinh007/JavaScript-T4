@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div id="textDiv">This is some sample text.</div>
+    <button onclick="changeStyle('blue','red')">Change Style</button>
+
+    <script>
+        // write ef6 function to be called on button click take 1 division with some text and no decoration initiially
+        // take font size and font style as default arguments and pass bg color and text color while passing argument to 
+        // function and style should change on btn click
+        let i=document.getElementById("textDiv");
+        i.style.color="red";
+        i.style.fontSize="50px";
+        i.style.backgroundColor="yellow";
+        i.style.fontStyle="italic";
+
+        function changeStyle(bgColor,textColor){
+            i.style.backgroundColor=bgColor;
+            i.style.color=textColor;
+        }
+    </script>
+</body>
+</html>

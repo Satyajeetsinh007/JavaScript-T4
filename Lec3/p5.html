@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="ok" onclick="getVal()">
+    
+    <script>
+        (function (){
+            alert("This is a warning message!");
+            document.write("Warning issued!");
+
+        })();
+        function getVal(){
+            var res=prompt("Enter your name:");
+            document.write("Hello, "+res+"!");
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const students=[{
+            name:"Alice",
+            scores:{
+                math:85,
+                science:90,
+                history:80
+            }
+        },
+        {
+            name:"Bob",
+            scores:{
+                math:40,
+                science:100,
+                history:100
+            }
+        },
+        {
+            name:"Charlie",
+            scores:{
+                math:30,
+                science:60,
+                history:90
+            }
+        }]
+        let max=0
+        let j;
+        for(let i of students){
+            add=i["scores"]["math"]+i["scores"]["science"]+i["scores"]["history"];
+            if(add>max){
+                max=add
+                j=i;
+            }
+        }
+        console.log(j);
+        let arg1=[1,2,3,4,5];
+        let arg2=[6,7,8,9,10];
+        arr=[...arg1,...arg2];
+        console.log(arr);
+        console.log(...arg1);
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
