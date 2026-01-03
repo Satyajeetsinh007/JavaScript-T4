@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" onsubmit="show(event)">
+        <input type="checkbox" id="parent"> I agree to the terms and conditions<br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <script>
+        var x=false
+        document.getElementById("parent").addEventListener("click", function(e){
+            if(e.target.checked){
+                x=true
+                // alert("Checkbox is checked");
+            } else {
+                x=false
+               // alert("Checkbox is unchecked");
+            }
+        });
+        function show(e){
+            if(x==false){
+                e.preventDefault();
+                alert("Please check the checkbox before submitting.");
+            } else {
+                alert("Form submitted successfully.");
+            }
+        }
+    </script>
+
+</body>
+</html>

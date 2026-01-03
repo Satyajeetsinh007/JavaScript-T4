@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select onchange="show(event)">
+        <option value="red">Red</option>
+        <option value="blue">Blue</option>
+    </select>
+    <script>
+        let show = (e) => {
+            alert("You selected: " + e.target.value +
+            "Event type: " + e.type);
+            alert("Event type: " + e.type);
+            alert("Element: " + e.target.tagName);
+            alert("Timestamp: " + e.timeStamp);
+            
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onkeyup="fun1(this)" onkeydown="fun2(this)">
+
+    <script>
+        function fun1(id){
+            id.bgColor="blue"
+        }
+        function fun2(id){
+            id.bgColor="yellow"
+        }
+    </script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onkeypress="keycheck(event)">
+    <script>
+        function keycheck(e){
+            if (['a','e','i','o','u','A','E','I','O','U'].includes(e.key)) {
+            alert("You pressed a vowel: " + e.key);
+        } else {
+            alert("You pressed a consonant: " + e.key);
+        }
+
+        }
+    </script>
+    
+</body>
+</html>
